@@ -23,8 +23,10 @@ export default class DevSeeder extends BaseSeeder {
       ])
     }
 
+    const categories = await Category.all()
+
     if ((await Article.all()).length === 0) {
-      await Article.createMany([
+      const articles = await Article.createMany([
         {
           title: 'Développeur web',
           slug: 'developpeur-web',
@@ -47,6 +49,10 @@ export default class DevSeeder extends BaseSeeder {
           published: false,
         },
       ])
+
+      await articles[0].related('categories').attach([categories[0].id])
+      await articles[1].related('categories').attach([categories[0].id, categories[2].id])
+      await articles[2].related('categories').attach([categories[2].id])
     }
   }
 }
