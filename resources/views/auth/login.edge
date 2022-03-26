@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  @if(flashMessages.has('error'))
+    <p>{{flashMessages.get('error')}}</p>
+  @endif
+  <form action="{{ route('AuthController.login') }}" method="POST">
+    <input type="text" name="username" placeholder="Nom d'utilisateur">
+    <input type="password" name="password" placeholder="Mot de passe">
+    <input type="submit" value="Connexion">
+  </form>
+</body>
+</html>

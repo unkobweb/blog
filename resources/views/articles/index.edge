@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{articles[0].content.substring(0,200)}}">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/index.css">
+  <title>Un dev random</title>
+</head>
+<body>
+  <div class="container">
+    @if(auth.isLoggedIn)
+      <div class="admin">
+        <a href="/admin">Admin</a>
+      </div>
+    @endif
+    <h1 class="hero-title">Un dev random</h1>
+    @each(article in articles)
+      <a href="#{{article.id}}">
+        <div class="article">
+          <h1 class="title">{{article.title}}</h1>
+          <div class="categories">
+            @each(category in article.categories)
+              <span class="category">{{category.label}}</span>
+            @endeach
+          </div>
+          <p>{{article.description}}</p>
+        </div>
+      </a>
+    @endeach
+  </div>
+</body>
+</html>

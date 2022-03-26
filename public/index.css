@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+  color: black;
+}
+
+.container {
+  max-width: 1000px;
+  height: 100%;
+  margin: auto;
+  padding-top: 50px;
+}
+
+.hero-title {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 20px;
+}
+
+.article {
+  border: 1px solid lightgray;
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.article:hover {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  cursor: pointer;
+}
+
+.article .title {
+  font-family: 'Ubuntu', sans-serif;
+  margin-left: -2px;
+  font-size: 28px;
+  margin-bottom: 1px;
+}
+
+.article .categories {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 15px;
+}
+
+.article .categories .category {
+  background-color: black;
+  color: white;
+  margin-right: 10px;
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-size: 11px;
+  font-family: 'Red Hat Mono', monospace, serif;
+}
